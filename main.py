@@ -2,11 +2,13 @@ import discord
 from discord.ext import commands
 import json
 import os
+from dotenv import load_dotenv
 
 # Get configuration.json
 with open("configuration.json", "r") as config: 
+	load_dotenv()
 	data = json.load(config)
-	token = os.environ.get("DISCORD_BOT_SECRET")
+	token = os.getenv('DISCORD_BOT_SECRET')
 	prefix = data["prefix"]
 	owner_id = data["owner_id"]
 
