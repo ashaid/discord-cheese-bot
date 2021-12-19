@@ -10,9 +10,10 @@ with open("configuration.json", "r") as config:
     load_dotenv()
     data = json.load(config)
     keep_alive()
-    token = os.getenv('DISCORD_BOT_SECRET')
+    token = os.environ['DISCORD_BOT_SECRET']
     prefix = data["prefix"]
     owner_id = data["owner_id"]
+
 
 
 class Greetings(commands.Cog):
