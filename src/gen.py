@@ -28,8 +28,18 @@ def Generate_Cheese():
         cheese_num = randint(0, count)
         selected_cheese = lines[cheese_num].strip()
 
+    if type_num == 0:
+        type = "Hard Cheese"
+    elif type_num == 1:
+        type = "Semi Hard Cheese"
+    elif type_num == 2:
+        type = "Semi Soft Cheese"
+    else:
+        type = "Soft Cheese"
+
     cheese = {
         "name": selected_cheese,
+        "type": type,
         "description": scraper.main(selected_cheese),
         "url": image_scraper.Image_Scrape(selected_cheese)
     }
