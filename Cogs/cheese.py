@@ -19,10 +19,10 @@ class CheeseCog(commands.Cog, name="cheese command"):
     async def CHEESE(self, ctx):
         if self.printing:
             self.printing = False
-            await ctx.send('Stopping Cheese Printer 🛑🧀')
+            await ctx.send('Stopping Cheese Printer 🛑🧀🖨️')
         else:
             self.printing = True
-            await ctx.send('Starting Cheese Printer 🟢🧀')
+            await ctx.send('Starting Cheese Printer 🟢🧀🖨️')
             await self.cheese_task(ctx)
 
     async def cheese_task(self, ctx):

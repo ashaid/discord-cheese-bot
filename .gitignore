@@ -7,3 +7,5 @@ env/
 src/__pycache__
 
 downloads/
+
+__pycache__/
