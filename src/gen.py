@@ -1,29 +1,39 @@
 import json
 from random import randint
 from enum import Enum
-import scraper
+import src.scraper as scraper
+import src.image_scraper as image_scraper
 
-# gen random number for type of cheese
-type_num = randint(0, 3)
 
-if type_num == 0:
-    file = "hard_cheeses.txt"
-elif type_num == 1:
-    file = "semi_hard_cheeses.txt"
-elif type_num == 2:
-    file = "semi_soft_cheeses.txt"
-else:
-    file = "soft_cheeses.txt"
+def Generate_Cheese():
+    # gen random number for type of cheese
+    type_num = randint(0, 3)
 
-with open("src/data/" + file, 'r') as infile:
-    lines = infile.readlines()
+    if type_num == 0:
+        file = "hard_cheeses.txt"
+    elif type_num == 1:
+        file = "semi_hard_cheeses.txt"
+    elif type_num == 2:
+        file = "semi_soft_cheeses.txt"
+    else:
+        file = "soft_cheeses.txt"
 
-    count = 0
+    with open("src/data/" + file, 'r') as infile:
+        lines = infile.readlines()
 
-    for line in lines:
-        count+= 1
-    cheese_num = randint(0, count)
-    selected_cheese = lines[cheese_num].strip()
+        count = 0
 
-scraper.main(selected_cheese)
+        for line in lines:
+            count+= 1
+        cheese_num = randint(0, count)
+        selected_cheese = lines[cheese_num].strip()
+
+    cheese = {
+        "name": selected_cheese,
+        "description": scraper.main(selected_cheese),
+        "url": image_scraper.Image_Scrape(selected_cheese)
+    }
+    return cheese
+
+#Generate_Cheese()
 

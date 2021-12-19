@@ -60,7 +60,7 @@ def google_search(query):
 
 def main(cheese):
     x = google_search(cheese + "cheese")
-    results = x[0]['title'] + "\n" + x[0]['link'] + "\n" + x[0]['text']
+    results = x[0]['text']
     print(results)
     return(results)
 

@@ -3,6 +3,7 @@ from discord.ext import commands
 from dotenv import load_dotenv
 from random import randint
 import os
+import src.gen as gen
 
 
 class CheeseCog(commands.Cog, name="cheese command"):
@@ -16,8 +17,10 @@ class CheeseCog(commands.Cog, name="cheese command"):
     @commands.cooldown(1, 2, commands.BucketType.member)
     async def CHEESE(self, ctx):
         load_dotenv()
-        embed = discord.Embed(title="American Cheese", description="Modern American cheese is a type of processed cheese developed in the 1910s made from cheddar, Colby, or similar cheeses", color=randint(0, 0xffffff))
-        embed.set_image(url=os.getenv('PLACEHOLDER_CHEESE_IMAGE'))
+        cheese = gen.Generate_Cheese()
+        embed = discord.Embed(title=cheese["name"], description=cheese["description"], color=randint(0, 0xffffff))
+        print(cheese["url"])
+        embed.set_image(url=cheese["url"][0])
         #embed.add_field(name="field", value="value", inline=False)
         embed.set_footer(text="bot made by tony")
         await ctx.send(embed=embed)
