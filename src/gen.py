@@ -7,32 +7,19 @@ import src.image_scraper as image_scraper
 
 def Generate_Cheese():
     # gen random number for type of cheese
-    type_num = randint(0, 3)
-
-    if type_num == 0:
-        file = "hard_cheeses.txt"
-    elif type_num == 1:
-        file = "semi_hard_cheeses.txt"
-    elif type_num == 2:
-        file = "semi_soft_cheeses.txt"
-    else:
-        file = "soft_cheeses.txt"
-
-    with open("src/data/" + file, 'r') as infile:
+    with open("src/data/all_cheeses.txt", 'r') as infile:
         lines = infile.readlines()
-
         count = 0
-
         for line in lines:
-            count+= 1
+            count += 1
         cheese_num = randint(0, count)
         selected_cheese = lines[cheese_num].strip()
 
-    if type_num == 0:
+    if cheese_num <= 167:
         type = "Hard Cheese"
-    elif type_num == 1:
+    elif cheese_num <= 273:
         type = "Semi Hard Cheese"
-    elif type_num == 2:
+    elif cheese_num <= 362:
         type = "Semi Soft Cheese"
     else:
         type = "Soft Cheese"
@@ -45,5 +32,4 @@ def Generate_Cheese():
     }
     return cheese
 
-#Generate_Cheese()
-
+# Generate_Cheese()
