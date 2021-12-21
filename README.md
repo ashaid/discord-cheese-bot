@@ -6,6 +6,7 @@
 # how to run
 
 `git clone https://github.com/ashaid/discord-cheese-bot.git`
+
 `pip install -r requirements.txt` (use a virtual environment)
 
 .env omitted for obvious reasons
