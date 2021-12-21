@@ -13,7 +13,7 @@ create a `.env` at root of the directory and add `DISCORD_BOT_SECRET=your key he
 
 invite to server and use `?help` to get started
 
-# personal server
+# personal server (hosting)
 
 use this guide
 https://dbotmaker.io/forums/threads/autorestarting-on-linux.93/
