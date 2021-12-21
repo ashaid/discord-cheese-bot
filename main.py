@@ -9,11 +9,10 @@ from keep_alive import keep_alive
 with open("configuration.json", "r") as config:
     load_dotenv()
     data = json.load(config)
-    keep_alive()
+    # keep_alive()
     token = os.environ['DISCORD_BOT_SECRET']
     prefix = data["prefix"]
     owner_id = data["owner_id"]
-
 
 
 class Greetings(commands.Cog):
