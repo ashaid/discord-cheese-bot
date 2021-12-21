@@ -9,3 +9,5 @@ src/__pycache__
 downloads/
 
 __pycache__/
+
+src/data/servers.json

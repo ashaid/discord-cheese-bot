@@ -1,18 +1,6 @@
 [
-    {
-        "server": "test",
-        "channel": "123"
-    },
-    {
-        "server": "capitalisM's server",
-        "channel": "922712336245096469"
-    },
-    {
-        "server": "'a2'",
-        "channel": "479427516805677060"
-    },
-    {
-        "server": "capitalisM's server",
-        "channel": "922649624395808811"
-    }
+  {
+    "server": "test",
+    "channel": "123"
+  }
 ]
