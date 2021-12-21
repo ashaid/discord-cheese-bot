@@ -20,7 +20,7 @@ https://dbotmaker.io/forums/threads/autorestarting-on-linux.93/
 
 # replit command help
 
-depreciated because I host the bot on my personal server now
+deprecated because I host the bot on my personal server now
 
 `pip install -r requirements.txt --no-cache-dir`
 
