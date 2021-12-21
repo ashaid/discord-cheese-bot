@@ -9,7 +9,7 @@
 
 `pip install -r requirements.txt` (use a virtual environment)
 
-create a `.env` at root of the file and add `DISCORD_BOT_SECRET=your key here` to use your custom bot key
+create a `.env` at root of the directory and add `DISCORD_BOT_SECRET=your key here` to use your custom bot key
 
 invite to server and use `?help` to get started
 
