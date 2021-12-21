@@ -28,9 +28,9 @@ bot = commands.Bot(prefix, intents=intents, owner_id=owner_id)
 
 # Load cogs
 if __name__ == '__main__':
-    for filename in os.listdir("Cogs"):
+    for filename in os.listdir("cogs"):
         if filename.endswith(".py"):
-            bot.load_extension(f"Cogs.{filename[:-3]}")
+            bot.load_extension(f"cogs.{filename[:-3]}")
 
 
 @bot.event
