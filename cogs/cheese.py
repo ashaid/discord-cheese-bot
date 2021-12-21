@@ -95,6 +95,7 @@ class CheeseCog(commands.Cog, name="cheese command"):
                               description=cheese["description"], color=randint(0, 0xffffff))
         embed.set_image(url=cheese["url"][0])
         embed.set_footer(text="bot made by tony")
+        await ctx.send('sending cheese')
         await self.cheese_task(embed)
 
     @commands.command(name="left",
