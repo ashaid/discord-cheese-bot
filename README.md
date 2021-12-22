@@ -1,6 +1,6 @@
 # discord bot to give cheese of the day
 
-![cheese of the day](https://user-images.githubusercontent.com/65536687/146851991-02fbb492-fa1d-45be-a01d-76f6b92891bb.png)
+![cheese of the day](https://user-images.githubusercontent.com/65536687/147008975-46417724-1f6a-40a2-97e1-c14e3cbfa2a0.png)
 ![time left until cheese](https://user-images.githubusercontent.com/65536687/146852222-194e8cb6-e270-4b76-8591-fddc4f931f47.png)
 
 # how to run
