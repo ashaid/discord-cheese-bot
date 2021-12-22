@@ -28,14 +28,15 @@ class Code(commands.Cog):
     @ commands.is_owner()
     @ commands.command(name="broadcast", description="broadcast to channels", pass_context=True, hidden=True)
     async def broadcast(self, ctx, *, msg):
-        for server in self.bot.guilds:
-            for channel in server.text_channels:
-                try:
-                    await channel.send(msg)
-                except Exception:
-                    continue
-                else:
-                    break
+        with open("src/data/servers.json", "r") as outfile:
+            file_data = json.load(outfile)
+
+        for each in file_data:
+            try:
+                channel = self.bot.get_channel(int(each['channel']))
+                await channel.send(msg)
+            except Exception:
+                continue
 
 
 def setup(bot: commands.Bot):

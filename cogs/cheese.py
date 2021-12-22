@@ -82,21 +82,21 @@ class CheeseCog(commands.Cog, name="cheese command"):
             except Exception:
                 continue
 
-    async def cheese_task(self, embed):
+    async def cheese_task(self):
         while self.printing:
+            cheese = gen.Generate_Cheese()
+            embed = discord.Embed(title=cheese["name"] + " - " + cheese["type"],
+                                  description=cheese["description"], color=randint(0, 0xffffff))
+            embed.set_image(url=cheese["url"][0])
+            embed.set_footer(text="bot made by tony")
             await self.broadcast(embed)
             await asyncio.sleep(86400)
 
     @commands.command(name="start", description="starts cheese")
     @commands.is_owner()
     async def start_cheese(self, ctx):
-        cheese = gen.Generate_Cheese()
-        embed = discord.Embed(title=cheese["name"] + " - " + cheese["type"],
-                              description=cheese["description"], color=randint(0, 0xffffff))
-        embed.set_image(url=cheese["url"][0])
-        embed.set_footer(text="bot made by tony")
         await ctx.send('sending cheese')
-        await self.cheese_task(embed)
+        await self.cheese_task()
 
     @commands.command(name="left",
                       aliases=["tl"],
