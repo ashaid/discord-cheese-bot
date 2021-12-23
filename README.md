@@ -3,7 +3,7 @@
 ![cheese of the day](https://user-images.githubusercontent.com/65536687/147008975-46417724-1f6a-40a2-97e1-c14e3cbfa2a0.png)
 ![time left until cheese](https://user-images.githubusercontent.com/65536687/146852222-194e8cb6-e270-4b76-8591-fddc4f931f47.png)
 
-# how to run
+## how to run
 
 `git clone https://github.com/ashaid/discord-cheese-bot.git`
 
@@ -13,12 +13,12 @@ create a `.env` at root of the directory and add `DISCORD_BOT_SECRET=your key he
 
 invite to server and use `?help` to get started
 
-# personal server (hosting)
+## personal server (hosting)
 
 use this guide
-https://dbotmaker.io/forums/threads/autorestarting-on-linux.93/
+<https://dbotmaker.io/forums/threads/autorestarting-on-linux.93/>
 
-# replit command help
+## replit command help
 
 deprecated because I host the bot on my personal server now
 
