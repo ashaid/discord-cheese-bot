@@ -8,6 +8,7 @@
 `git clone https://github.com/ashaid/discord-cheese-bot.git`
 
 `pip install -r requirements.txt` (use a virtual environment)
+`pip install git+<https://github.com/Joeclinton1/google-images-download@patch-1>`
 
 create a `.env` at root of the directory and add `DISCORD_BOT_SECRET=your key here` to use your custom bot key
 
